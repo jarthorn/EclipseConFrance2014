@@ -22,6 +22,7 @@
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
+			/* global document window */
 			document.write( '<link rel="stylesheet" href="../reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
@@ -52,7 +53,7 @@
 					<ul>
 						<li>Truly cross platform (tablets, servers, desktops ...)</li>
 						<li>Extreme scalability (up and down)</li>
-						<li>Low cost <a href="https://orion.eclipse.org">tool</a> <a href="https://hudson.eclipse.org/orion/">configuration</a></li>
+						<li>Low cost <a href="https://orion.eclipse.org/help/about.html">tool</a> <a href="https://hudson.eclipse.org/orion/">configuration</a></li>
 						<li>Toolchain control</li>
 					</ul>
 				</section>
@@ -89,27 +90,18 @@
 				</section>
 
 				<section>
-					<h1>Why Flux?</h1>
-					<ul>
-						<li>Strong pressure in industry towards cloud-based developer tools, particularly when deploying to cloud-based runtimes</li>
-						<li>Current browser-based tools showing promise but have significant gaps in functionality especially in area of compiled languages</li>
-						<li>Currently there is no story for integrating legacy tools or providing incremental migration from desktop tools to the cloud</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Project Goals</h1>
-					<ul>
-						<li>Create cloud based tooling services that could be consumed by development environments across both desktop and web based environments</li>
-						<li>Design and implement a new architecture and infrastructure for integrating development tools across desktop, browser, and servers</li>
-						<li>Build a strong ecosystem around this tooling service model including both open and vendor-specific tools</li>
-						<li>Initial code contribution from Pivotal including tooling service architecture, prototype browser-based Java tools and Eclipse integration</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Architecture</h1>
+					<h2>Current Architecture</h2>
 					<img src="images/flux-architecture.png" alt="Flux Architecture Diagram">
+				</section>
+
+				<section>
+					<h2>Future Architecture</h2>
+					<img src="images/flux-architecture2.png" alt="Flux Architecture Diagram">
+				</section>
+
+				<section>
+					<h2>Cloud Architecture</h2>
+					<img src="images/flux-architecture3.png" alt="Flux Architecture Diagram">
 				</section>
 
 				<section>
@@ -119,6 +111,16 @@
 						<li>Cloud-based Java language tooling</li>
 						<li>Cloud-based JavaScript language tooling</li>
 						<li>Application deployment and execution services, possible debug integration</li>
+						<li>&lt;enter your work area here&gt;</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>References</h2>
+					<ul>
+						<li><a href="http://wiki.eclipse.org/Flux">http://wiki.eclipse.org/Flux</a></li>
+						<li><a href="http://github.com/eclipse/flux">http://github.com/eclipse/flux</a></li>
+						<li><a href="http://github.com/jarthorn/EclipseConFrance2014">http://github.com/jarthorn/EclipseConFrance2014</a></li>
 					</ul>
 				</section>
 
@@ -136,7 +138,7 @@
 		<script src="../reveal/js/reveal.min.js"></script>
 
 		<script>
-			/*global Reveal hljs */
+			/*global Reveal hljs document */
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
